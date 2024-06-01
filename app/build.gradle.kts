@@ -10,6 +10,13 @@ plugins {
 android {
     namespace = "com.easyhz.cmc15th_hackathon"
     compileSdk = 34
+    
+    buildFeatures{
+        dataBinding{
+            enable = true
+        }
+        buildConfig = true
+    }
 
     defaultConfig {
         applicationId = "com.easyhz.cmc15th_hackathon"
