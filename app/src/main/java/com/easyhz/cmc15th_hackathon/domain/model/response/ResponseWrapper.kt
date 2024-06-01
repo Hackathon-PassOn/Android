@@ -10,6 +10,6 @@ data class ResponseWrapper<out T>(
     val code: String,
     @Json(name = "message")
     val message: String,
-    @Json(name = "result")
+    @Json(name = "data")
     val data: T
 )

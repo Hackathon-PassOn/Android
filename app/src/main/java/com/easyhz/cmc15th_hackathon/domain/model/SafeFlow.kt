@@ -1,13 +1,14 @@
 package com.easyhz.cmc15th_hackathon.domain.model
 
 import com.easyhz.cmc15th_hackathon.domain.model.response.ErrorResponse
+import com.easyhz.cmc15th_hackathon.domain.model.response.ResponseWrapper
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import retrofit2.Response
 
-fun <T : Any> safeFlow(apiFunc: suspend () -> Response<T>): Flow<ApiState<T>> =
+fun <T : Any> safeFlow(apiFunc: suspend () -> Response<ResponseWrapper<T>>): Flow<ApiState<ResponseWrapper<T>>> =
     flow {
         try {
             val res = apiFunc.invoke()
