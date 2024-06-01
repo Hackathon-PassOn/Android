@@ -10,7 +10,7 @@ plugins {
 android {
     namespace = "com.easyhz.cmc15th_hackathon"
     compileSdk = 34
-    
+
     buildFeatures{
         dataBinding{
             enable = true
@@ -83,6 +83,9 @@ dependencies {
     implementation(libs.androidx.lifecycle.livedata.ktx)
     // Annotation processor
     ksp(libs.androidx.lifecycle.compiler)
+
+    // location
+    implementation(libs.play.services.location)
 
 
 }
