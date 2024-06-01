@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/group_48110472"
+        android:orientation="vertical"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="43dp"
+        tools:context=".presentation.ui.MainFragment">
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="99dp"
+            >
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="328dp"
+                android:layout_height="40dp"
+                android:background="@drawable/rectangle_159094"
+                android:drawableLeft="@drawable/search"
+                android:paddingLeft="15dp"
+                android:hint="   지번, 도로명, 건물명으로 검색"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/editadress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="주소설정"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="43dp"/>
+        <ImageView
+            android:id="@+id/arrowback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_back_ios_24"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="43dp"
+            android:layout_marginLeft="16dp"
+            />
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

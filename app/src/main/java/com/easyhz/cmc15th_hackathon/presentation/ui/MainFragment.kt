@@ -14,10 +14,10 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
     override fun initView() {
         super.initView()
         binding.apply {
-            textView.text = "Main Fragment --"
+            /*textView.text = "Main Fragment --"
             button.setOnClickListener {
                 NavControllerManager.navigateToExample()
-            }
+            }*/
         }
     }
 
