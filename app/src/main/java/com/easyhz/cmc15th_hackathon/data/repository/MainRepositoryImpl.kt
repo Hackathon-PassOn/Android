@@ -12,7 +12,7 @@ class MainRepositoryImpl @Inject constructor(
 ): MainRepository {
 
     override fun searchCategory(): Flow<ApiWrapper<Any>> = safeFlow {
-        mainService.searchCategory()
+        mainService.searchCategory(lat = 0.0, lng = 0.0, "", "")
     }
 
     override fun helpGPT(): Flow<ApiWrapper<Any>> = safeFlow {
