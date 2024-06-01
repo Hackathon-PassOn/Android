@@ -22,17 +22,19 @@ import java.util.Locale
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-
+  
     private val permissionUtil: RequestPermissionUtil by lazy {
         RequestPermissionUtil(this)
     }
-    override fun onCreate(savedInstanceState: Bundle?) {
+
+  override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
 //        enableEdgeToEdge()
         initNavControllerManager()
         setContentView(binding.root)
     }
+
 
     override fun onStart() {
         super.onStart()
