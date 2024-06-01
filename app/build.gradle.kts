@@ -68,6 +68,7 @@ dependencies {
     implementation(libs.moshi.kotlin)
     implementation(libs.converter.scalars)
     implementation(libs.converter.moshi)
+    implementation(libs.converter.gson)
 
     // ViewModel
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
@@ -75,5 +76,6 @@ dependencies {
     implementation(libs.androidx.lifecycle.livedata.ktx)
     // Annotation processor
     ksp(libs.androidx.lifecycle.compiler)
+
 
 }
