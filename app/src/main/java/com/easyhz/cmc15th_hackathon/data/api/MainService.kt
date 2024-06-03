@@ -1,8 +1,13 @@
 package com.easyhz.cmc15th_hackathon.data.api
 
+import android.view.MenuItem
 import com.easyhz.cmc15th_hackathon.domain.NetworkResponse
+import com.easyhz.cmc15th_hackathon.domain.model.param.RandomItem
 import com.easyhz.cmc15th_hackathon.domain.model.response.main.SearchResponse
+import com.easyhz.cmc15th_hackathon.domain.model.response.random.RandomResponse
+import retrofit2.http.Body
 import retrofit2.http.GET
+import retrofit2.http.POST
 import retrofit2.http.Query
 
 interface MainService {
@@ -27,4 +32,14 @@ interface MainService {
     // 퀴즈 랜덤 제공
     @GET("")
     suspend fun fetchRandomQuiz(): NetworkResponse<Any>
+
+    @POST("/gpt/random-menu")
+    suspend fun randomMenu(
+        @Body menuNameList: RandomItem
+    ): NetworkResponse<RandomResponse>
+
+    @POST("/gpt/random-payer")
+    suspend fun randomPeople(
+        @Body menuNameList: RandomItem
+    ): NetworkResponse<RandomResponse>
 }

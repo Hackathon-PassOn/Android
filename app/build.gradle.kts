@@ -94,5 +94,12 @@ dependencies {
     // location
     implementation(libs.play.services.location)
 
+    // Material - for viewpager2
+    implementation(libs.material)
+    implementation(libs.dotsindicator)
+
+    // Glide - for loading images in ImageView
+    implementation(libs.glide)
+    ksp(libs.compiler)
 
 }
