@@ -25,7 +25,7 @@ object NetworkModule {
         @InterceptorOkhttpClient client: OkHttpClient
     ): Retrofit = Retrofit.Builder()
         .client(client)
-        .baseUrl("http://3.38.244.189")
+        .baseUrl("http://3.38.244.189/16.9")
         .addConverterFactory(GsonConverterFactory.create())
         .addConverterFactory(MoshiConverterFactory.create())
         .build()
