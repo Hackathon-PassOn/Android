@@ -1,6 +1,7 @@
 package com.easyhz.cmc15th_hackathon.di
 
 import com.easyhz.cmc15th_hackathon.data.repository.MainRepositoryImpl
+import com.easyhz.cmc15th_hackathon.domain.repository.MainRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -12,7 +13,7 @@ import dagger.hilt.android.scopes.ViewModelScoped
 abstract class RepositoryModule {
     @Binds
     @ViewModelScoped
-    abstract fun bindsPostRepository(
+    abstract fun bindsMainRepository(
         mainRepositoryImpl: MainRepositoryImpl
-    ): MainRepositoryImpl
+    ): MainRepository
 }
